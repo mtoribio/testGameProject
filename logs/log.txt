@@ -1,0 +1,347 @@
+
+* WARNING: MenuState does not support serialization. Returning nil.
+Please override the :serialize method and return a hash so that
+Class can be persisted to disk in the event of an exception.
+Here is an example of what you need to do:
+#+begin_src ruby
+class MenuState
+  # 1. Create a serialize method that returns a hash with all of
+  #    the values you care about.
+  def serialize
+    { }
+  end
+
+  # 2. Override the inspect method and return ~serialize.to_s~.
+  def inspect
+    serialize.to_s
+  end
+
+  # 3. Override to_s and return ~serialize.to_s~.
+  def to_s
+    serialize.to_s
+  end
+end
+#+end_src
+
+[Message ID: []]
+
+
+* WARNING: MenuState does not support serialization. Returning nil.
+Please override the :serialize method and return a hash so that
+Class can be persisted to disk in the event of an exception.
+Here is an example of what you need to do:
+#+begin_src ruby
+class MenuState
+  # 1. Create a serialize method that returns a hash with all of
+  #    the values you care about.
+  def serialize
+    { }
+  end
+
+  # 2. Override the inspect method and return ~serialize.to_s~.
+  def inspect
+    serialize.to_s
+  end
+
+  # 3. Override to_s and return ~serialize.to_s~.
+  def to_s
+    serialize.to_s
+  end
+end
+#+end_src
+
+[Message ID: []]
+
+
+* DOCS:
+Here are the classes that have documentation. You can call the .docs method
+on any of these classes:
+** GTK::ReadMe.docs
+** GTK::Runtime.docs
+** Array.docs
+** GTK::Args.docs
+** GTK::Outputs.docs
+** GTK::Mouse.docs
+** GTK::OpenEntity.docs
+** Numeric.docs
+** Kernel.docs
+** Geometry.docs
+
+================
+* INFO: Starting Itch Wizard.
+* INFO: Running Itch Wizard Step: ~$wizards.itch.check_metadata~
+* INFO: Contents of metadata/game_metadata.txt:
+#+begin_src txt
+  # Remove the pound sign and leading space for the properties below before publishing your game.
+
+  # devid=myname
+
+  # devtitle=My Name
+
+  # gameid=mygame
+
+  # gametitle=My Game
+
+  # version=0.1
+
+  # icon=metadata/icon.png
+
+  
+
+  # === Flags available at all licensing tiers ===
+
+  
+
+  # Defines the render scale quality for sprites. scale_quality=0 (default) is nearest neighbor, scale_quality=1 is linear, scale_quality=2 is antialiased.
+
+  # scale_quality=0
+
+  
+
+  # === Flags available in DragonRuby Game Toolkit Pro ====
+
+  
+
+  # Uncomment the entry below to bytecode compile your Ruby code
+
+  # compile_ruby=false
+
+  
+
+  # Uncomment the entry below to specify the package name for your APK
+
+  # packageid=org.dev.gamename
+
+  
+
+  # Setting this property to true will enable High DPI rendering (try in combination with scale_quality to see what looks best)
+
+  # highdpi=false
+
+  
+
+  # === Portrait Mode ===
+
+  # The orientation can be set to either landscape (1280x720) or portrait (720x1280)
+
+  # orientation=landscape
+
+  
+
+  # === HD Mode ===
+
+  
+
+  # HD Mode: when enabled, will give you 720p, 1080p, 1440p, 4k, and 5k rendering options
+
+  # Check out the following YouTube Video for a demo of DragonRuby's HD Capabilities
+
+  # https://youtu.be/Rnc6z84zaa4
+
+  # hd=false
+
+  
+
+  # === Texture Atlases ===
+
+  
+
+  # See sample app for texture atlas usage: =./samples/07_advanced_rendering_hd/02_texture_atlases=
+
+  # DragonRuby will recursively search the following directory for texture atlases.
+
+  # sprites_directory=sprites
+
+  
+
+  # === All Screen Mode ===
+
+  
+
+  # All Screen Mode: when enabled, removes the letter box and lets you render outside of the 16:9 safe area
+
+  # NOTE: requires hd=true
+
+  # allscreen=false
+
+  
+
+  # All Screen Mode's Max Scale: You can specify the maximum scale for your game. Any resolution higher than your max scale will give more area outside of your resolutions safe area:
+
+  
+
+  # default value is 100 (which keeps the baseline 720p and draws to all screen area from there)
+
+  # allscreen_max_scale=100
+
+  
+
+  # Supported values for max scale:
+
+  
+
+  # 720p: scales up to 1280x720 (and draws to all screen area from there)
+
+  # allscreen_max_scale=100
+
+  
+
+  # HD+: scales up to 1600x900
+
+  # allscreen_max_scale=125
+
+  
+
+  # 1080p: scales up to 1920x1080
+
+  # allscreen_max_scale=150
+
+  
+
+  # 1440p: scales up to 2560x1440
+
+  # allscreen_max_scale=200
+
+  
+
+  # 1800p: scales up to 3200x1800
+
+  # allscreen_max_scale=250
+
+  
+
+  # 4k: scales up to 3840x2160
+
+  # allscreen_max_scale=300
+
+  
+
+  # 5k: scales up to 6400x2880
+
+  # allscreen_max_scale=400
+
+#+end_src
+* PROMPT: Please provide your username for Itch.
+* INFO: Exiting wizard. :need_dev_id
+
+* WARNING: ~Hash#solid~ is deprecated becuase it's poorly named. Use ~Hash#solid!~ instead.
+This method will stay here for backwards compatibility. But, consider using one of the following methods:
+** Option 1: ~:solid! &OPTIONAL additional_keys_to_merge~
+This will mutate the current hash in-place. It's identical to the current method you're using,
+but better signifies that a side effect is occuring (because of the ~!~ at the end).
+*** Example
+Here is an example of how your code may change.
+**** Before
+#+begin_src ruby
+  def tick args
+    args.state.primitive_style  ||= { r: 255, g: 255, b: 255 }
+
+    # here ~Hash#merge!~ and ~Hash#border~ are used in combination
+    args.state.some_primitive ||= { x: 8, y: 8, w: 32, h: 32 }.merge!(primitive_style).solid
+
+    args.outputs.primitives << args.state.some_primitive
+  end
+#+end_src
+**** After
+#+begin_src ruby
+  def tick args
+    args.state.primitive_style  ||= { r: 255, g: 255, b: 255 }
+
+    # if you use ~Hash#solid!~ you can combine the
+    # ~Hash#merge!~ and ~Hash#solid~ method calls
+    args.state.some_solid ||= { x: 8, y: 8, w: 32, h: 32 }.solid! primitive_style
+
+    args.outputs.primitives << args.state.button_solid
+  end
+#+end_src
+** Option 2: ~:to_solid &OPTIONAL additional_keys_to_merge~
+This will return a new ~Hash~ leaving the original *untouched*.
+** Caller:
+If you decide to fix this error now, you can run ~Log.reset~ to invalidate this warning
+and be notified of other places you're using this function.
+*** app/main.rb:98
+
+[Message ID: [:consider_solid!]]
+
+* INFO: The search results above has been seen in logs/puts.txt and docs/search_results.txt.
+
+* WARNING: Menu does not support serialization. Returning nil.
+Please override the :serialize method and return a hash so that
+Class can be persisted to disk in the event of an exception.
+Here is an example of what you need to do:
+#+begin_src ruby
+class Menu
+  # 1. Create a serialize method that returns a hash with all of
+  #    the values you care about.
+  def serialize
+    { }
+  end
+
+  # 2. Override the inspect method and return ~serialize.to_s~.
+  def inspect
+    serialize.to_s
+  end
+
+  # 3. Override to_s and return ~serialize.to_s~.
+  def to_s
+    serialize.to_s
+  end
+end
+#+end_src
+
+[Message ID: []]
+
+
+* WARNING: Game does not support serialization. Returning nil.
+Please override the :serialize method and return a hash so that
+Class can be persisted to disk in the event of an exception.
+Here is an example of what you need to do:
+#+begin_src ruby
+class Game
+  # 1. Create a serialize method that returns a hash with all of
+  #    the values you care about.
+  def serialize
+    { }
+  end
+
+  # 2. Override the inspect method and return ~serialize.to_s~.
+  def inspect
+    serialize.to_s
+  end
+
+  # 3. Override to_s and return ~serialize.to_s~.
+  def to_s
+    serialize.to_s
+  end
+end
+#+end_src
+
+[Message ID: []]
+
+
+* WARNING: Game does not support serialization. Returning nil.
+Please override the :serialize method and return a hash so that
+Class can be persisted to disk in the event of an exception.
+Here is an example of what you need to do:
+#+begin_src ruby
+class Game
+  # 1. Create a serialize method that returns a hash with all of
+  #    the values you care about.
+  def serialize
+    { }
+  end
+
+  # 2. Override the inspect method and return ~serialize.to_s~.
+  def inspect
+    serialize.to_s
+  end
+
+  # 3. Override to_s and return ~serialize.to_s~.
+  def to_s
+    serialize.to_s
+  end
+end
+#+end_src
+
+[Message ID: []]
+

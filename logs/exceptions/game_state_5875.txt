@@ -1,0 +1,111 @@
+# * EXCEPTION:
+# * ERROR:
+# ** :a "A"
+# ** :b "B"
+# ** :c "C"
+# ** :d "D"
+# ** :e "E"
+# ** :f "F"
+# ** :g "G"
+# ** :h "H"
+# ** :i "I"
+# ** :j "J"
+# ** :k "K"
+# ** :l "L"
+# ** :m "M"
+# ** :n "N"
+# ** :o "O"
+# ** :p "P"
+# ** :q "Q"
+# ** :r "R"
+# ** :s "S"
+# ** :t "T"
+# ** :u "U"
+# ** :v "V"
+# ** :w "W"
+# ** :x "X"
+# ** :y "Y"
+# ** :z "Z"
+# ** :exclamation_point "!"
+# ** :zero "0"
+# ** :one "1"
+# ** :two "2"
+# ** :three "3"
+# ** :four "4"
+# ** :five "5"
+# ** :six "6"
+# ** :seven "7"
+# ** :eight "8"
+# ** :nine "9"
+# ** :backspace ""
+# ** :escape ""
+# ** :enter ""
+# ** :tab ""
+# ** :open_round_brace "("
+# ** :close_round_brace ")"
+# ** :open_curly_brace "{"
+# ** :close_curly_brace "}"
+# ** :open_square_brace "["
+# ** :close_square_brace "]"
+# ** :colon ":"
+# ** :semicolon ";"
+# ** :equal_sign "="
+# ** :hyphen "-"
+# ** :space ""
+# ** :dollar_sign "$"
+# ** :double_quotation_mark """
+# ** :single_quotation_mark "'"
+# ** :backtick "`"
+# ** :tilde "~"
+# ** :period "."
+# ** :comma ","
+# ** :pipe "|"
+# ** :underscore "_"
+# ** :hash "#"
+# ** :plus "+"
+# ** :at "@"
+# ** :forward_slash "/"
+# ** :back_slash "\"
+# ** :asterisk "*"
+# ** :less_than "<"
+# ** :greater_than ">"
+# ** :circumflex "^"
+# ** :ampersand "&"
+# ** :superscript_two "²"
+# ** :section_sign "§"
+# ** :question_mark "?"
+# ** :percent_sign "%"
+# ** :ordinal_indicator "º"
+# ** :home raw_key == 1073741898
+# ** :end raw_key == 1073741901
+# ** :right raw_key == 1073741903
+# ** :left raw_key == 1073741904
+# ** :down raw_key == 1073741905
+# ** :up raw_key == 1073741906
+# ** :pageup raw_key == 1073741899
+# ** :pagedown raw_key == 1073741902
+# ** :delete raw_key == 127
+# ** :shift_left raw_key == 1073742049
+# ** :shift raw_key == 1073742053
+# ** :shift_right raw_key == 1073742053
+# ** :control_left raw_key == 1073742048
+# ** :control raw_key == 1073742052
+# ** :control_right raw_key == 1073742052
+# ** :alt_left raw_key == 1073742050
+# ** :alt raw_key == 1073742054
+# ** :alt_right raw_key == 1073742054
+# ** :meta_left raw_key == 1073742051
+# ** :meta raw_key == 1073742055
+# ** :meta_right raw_key == 1073742055
+# 
+# There is no key on the keyboard called :en. Did you mean :enter (""), :end (raw_key == 1073741901)?.
+# Full list of available keys =:points_up:=.
+# 
+# ** Backtrace:
+# *** app/controllers/title_controller.rb:4:in tick
+# *** app/game.rb:23:in tick
+# *** app/main.rb:14:in tick
+# *** app/controllers/title_controller.rb:1
+
+Game State:
+{:state=>{:entity_id=>3, :tick_count=>5875}, :temp_state=>{}, :inputs=>{:controller_one=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_two=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_three=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_four=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :keyboard=>{:key_up=>{:truthy_keys=>[]}, :key_held=>{:truthy_keys=>[]}, :key_down=>{:truthy_keys=>[]}, :has_focus=>false}, :mouse=>{:x=>362.0, :y=>2.0, :moved=>nil, :moved_at=>1132, :has_focus=>false}, :text=>[]}, :passes=>[], :outputs=>{:solids=>[], :sprites=>[], :lines=>[], :labels=>[], :sounds=>[], :borders=>[], :primitives=>[], :static_solids=>[], :static_borders=>[], :static_sprites=>[], :static_lines=>[], :static_labels=>[], :static_primitives=>[]}, :grid=>{:top=>720, :device_bottom=>0.0, :device_top=>720, :right=>1280, :left_margin=>0.0, :device_height=>720, :device_width=>1280, :bottom=>0.0, :ffi_draw=>"", :native_width=>1280, :native_height=>720, :origin_x=>0.0, :runtime=>{:argv=>"./dragonruby", :platform=>"Linux", :required_files=>["app/game.rb", "app/menu.rb", "app/controllers/title_controller.rb", "app/controllers/game_controller.rb"], :reload_list_history=>{"app/main.rb"=>{:current=>{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}, :history=>[{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>-1, :event=>:processing}, {:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}]}, "app/game.rb"=>{:current=>{:path=>"app/game.rb", :global_at=>4741, :event=>:reload_completed}, :history=>[{:path=>"app/game.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/game.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/game.rb", :global_at=>4739, :event=>:reload_queued}, {:path=>"app/game.rb", :global_at=>4740, :event=>:processing}, {:path=>"app/game.rb", :global_at=>4741, :event=>:reload_completed}]}, "app/menu.rb"=>{:current=>{:path=>"app/menu.rb", :global_at=>-1, :event=>:reload_completed}, :history=>[{:path=>"app/menu.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/menu.rb", :global_at=>-1, :event=>:reload_completed}]}, "app/controllers/title_controller.rb"=>{:current=>{:path=>"app/controllers/title_controller.rb", :global_at=>7081, :event=>:reload_completed}, :history=>[{:path=>"app/controllers/title_controller.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/controllers/title_controller.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/controllers/title_controller.rb", :global_at=>359, :event=>:reload_queued}, {:path=>"app/controllers/title_controller.rb", :global_at=>360, :event=>:processing}, {:path=>"app/controllers/title_controller.rb", :global_at=>361, :event=>:reload_completed}, {:path=>"app/controllers/title_controller.rb", :global_at=>6899, :event=>:reload_queued}, {:path=>"app/controllers/title_controller.rb", :global_at=>6900, :event=>:processing}, {:path=>"app/controllers/title_controller.rb", :global_at=>6901, :event=>:reload_completed}, {:path=>"app/controllers/title_controller.rb", :global_at=>7079, :event=>:reload_queued}, {:path=>"app/controllers/title_controller.rb", :global_at=>7080, :event=>:processing}, {:path=>"app/controllers/title_controller.rb", :global_at=>7081, :event=>:reload_completed}]}, "app/controllers/game_controller.rb"=>{:current=>{:path=>"app/controllers/game_controller.rb", :global_at=>5641, :event=>:reload_completed}, :history=>[{:path=>"app/controllers/game_controller.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/controllers/game_controller.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/controllers/game_controller.rb", :global_at=>5639, :event=>:reload_queued}, {:path=>"app/controllers/game_controller.rb", :global_at=>5640, :event=>:processing}, {:path=>"app/controllers/game_controller.rb", :global_at=>5641, :event=>:reload_completed}]}}}, :allscreen_offset_y=>0, :origin_y=>720, :native_scale=>1.0, :allscreen_offset_x=>0, :native_scale_enum=>100, :left=>0.0, :device_right=>1280, :device_left=>0.0, :name=>:bottom_left, :allscreen_left=>0, :allscreen_right=>1280, :center=>[640.0, 360.0], :center_y=>360.0, :allscreen_bottom=>0, :rect=>[0.0, 0.0, 1280, 720], :allscreen_top=>720, :allscreen_height=>720, :bottom_margin=>0.0, :allscreen_width=>1280, :center_x=>640.0}}

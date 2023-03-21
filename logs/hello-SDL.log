@@ -1,0 +1,265 @@
+* 000000 [Engine] Log started at 2023/2/24 13:31:46
+* 000000 [Engine] This copy of the engine is git hash ba6c1a98764a11c5a0bb7cc49b0ea618de812b12, built on Jan 13 2023, at 23:45:27
+* 000000 [Engine] Platform: Linux
+* 000000 [Engine] 
+* 000000 [Engine] *******************************************************************************************
+* 000000 [Engine] *** This is the Standard license build!                                                 ***
+* 000000 [Engine] *** Get more with an Indie or Pro license such as C extensions, mobile dev, and VR dev! ***
+* 000000 [Engine] *** Details at http://dragonruby.org/toolkit/game#purchase                              ***
+* 000000 [Engine] *******************************************************************************************
+* 000000 [Engine] 
+! 000000 [Engine] Metadata file does not have all required fields!
+- 000000 [Engine] Game Dir: /home/mtoribio/RubymineProjects/dragonRuby/testProject//mygame
+- 000000 [Engine] Game ID: hello-SDL
+- 000000 [Engine] Game Title: Update metadata/game_metadata.txt in your mygame directory to change this title.
+- 000000 [Engine] Game Version: 1.0
+- 000000 [Engine] Game Package ID: org.dragonruby.hello-SDL
+- 000000 [Engine] Game Developer ID: dragonruby
+- 000000 [Engine] Game Developer Title: DragonRuby LLC
+- 000000 [Engine] Production Build: no
+- 000000 [Engine] Remote Hotload: no
+? 000000 [Engine] Loading cvars from file 'metadata/cvars.txt' ...
+? 000000 [Engine] File 'metadata/cvars.txt' line 1 setting cvar 'log.filter_subsystems' to 'HTTPServer'
+? 000000 [Engine] File 'metadata/cvars.txt' complete
+? 000000 [Engine] RNG seed has been set to 1677241906.
+- 000000 [Engine] Janitor is using 4 threads.
+? 000000 [Engine] Marked app/main.rb for reload. (-1)
+- 000001 [Game] Game state and exception will be written to logs/exceptions/game_state_53.txt and logs/exceptions/current.txt.
+- 000001 [Game] * EXCEPTION:
+* ERROR - :tile_type method missing on ~Class~.
+The method named
+  :tile_type
+doesn't exist on
+  [Class, Controllers::MapController].
+#+begin_src ~Class#inspect~
+Controllers::MapController
+#+end_src ~Class#inspect~ for :tile_type method missing on ~Class~
+
+** Did you mean?
+Here's a list of methods that kind of look like :tile_type.
+*** :tile_for
+** Backtrace:
+*** app/controllers/map_controller.rb:25:in tile_for
+*** app/controllers/map_controller.rb:16:in map_tiles
+*** app/controllers/map_controller.rb:14:in map_tiles
+*** app/controllers/map_controller.rb:13:in map_tiles
+*** app/controllers/map_controller.rb:9:in load_map
+*** app/controllers/game_controller.rb:11:in reset
+*** app/game.rb:15:in goto_game
+*** app/controllers/title_controller.rb:4:in tick
+*** app/game.rb:23:in tick
+*** app/main.rb:21:in tick
+*** app/entities/floor.rb:1 (53)
+? 000044 [Engine] Marked app/controllers/map_controller.rb for reload. (2639)
+- 000044 [Game] * INFO: New methods discovered.
+** :gtk
+** :grid
+** :args=
+** :args
+** :state
+** :render
+** :new_entity
+** :new_entity_strict
+** :events
+** :layout
+** :geometry
+** :pixel_arrays
+** :keyboard
+** :inputs
+** :temp_state
+** :passes
+** :outputs
+** :goto_title
+** :active_controller
+** :goto_game
+
+- 000057 [Game] * WARNING:
+Your average framerate dropped below 60 fps for two seconds.
+
+The average FPS was 13.98245614035088.
+
+** How To Disable Warning
+If this warning is getting annoying put the following in your tick method:
+
+#+begin_src
+  args.gtk.log_level = :off
+#+end_src
+
+* INFO: Framerate Diagnostics
+You can display these diagnostics using:
+
+#+begin_src
+  def tick args
+    # ....
+
+    # IMPORTANT: Put this at the END of the ~tick~ method.
+    args.outputs.debug << args.gtk.framerate_diagnostics_primitives
+  end
+#+end_src
+
+** Draw Calls: ~<<~ Invocation Perf Counter
+Here is how many times ~args.outputs.PRIMITIVE_ARRAY <<~ was called:
+
+  3 times invoked.
+
+If the number above is high, consider batching primitives so you can lower the invocation of ~<<~. For example.
+
+Instead of:
+
+#+begin_src
+  args.state.enemies.map do |e|
+    e.alpha = 128
+    args.outputs.sprites << e # <-- ~args.outputs.sprites <<~ is invoked a lot
+  end
+#+end_src
+
+Do this:
+
+#+begin_src
+  args.outputs.sprites << args.state
+                              .enemies
+                              .map do |e| # <-- ~args.outputs.sprites <<~ is only invoked once.
+    e.alpha = 128
+    e
+  end
+#+end_src
+
+** Array Primitives
+~Primitives~ represented as an ~Array~ (~Tuple~) are great for prototyping, but are not as performant as using a ~Hash~.
+
+Here is the number of ~Array~ primitives that were encountered:
+
+  0 Array Primitives.
+
+If the number above is high, consider converting them to hashes. For example.
+
+Instead of:
+
+#+begin_src
+  args.outputs.sprites << [0, 0, 100, 100, 'sprites/enemy.png']
+#+begin_end
+
+Do this:
+
+#+begin_src
+  args.outputs.sprites << { x: 0,
+                            y: 0,
+                            w: 100,
+                            h: 100,
+                            path: 'sprites/enemy.png' }
+#+begin_end
+
+** Primitive Counts
+Here are the draw counts ordered by lowest to highest z order:
+
+PRIMITIVE   COUNT, STATIC COUNT
+solids:     0, 0
+sprites:    3600, 0
+primitives: 0, 0
+labels:     0, 0
+lines:      0, 0
+borders:    0, 0
+debug:      6, 0
+reserved:   0, 0
+
+** Additional Help
+Come to the DragonRuby Discord channel if you need help troubleshooting performance issues. http://discord.dragonruby.org.
+
+Source code for these diagnostics can be found at: [[https://github.com/dragonruby/dragonruby-game-toolkit-contrib/]]
+
+
+- 040212 [Game] * WARNING:
+Your average framerate dropped below 60 fps for two seconds.
+
+The average FPS was 9.47671647391806.
+
+** How To Disable Warning
+If this warning is getting annoying put the following in your tick method:
+
+#+begin_src
+  args.gtk.log_level = :off
+#+end_src
+
+* INFO: Framerate Diagnostics
+You can display these diagnostics using:
+
+#+begin_src
+  def tick args
+    # ....
+
+    # IMPORTANT: Put this at the END of the ~tick~ method.
+    args.outputs.debug << args.gtk.framerate_diagnostics_primitives
+  end
+#+end_src
+
+** Draw Calls: ~<<~ Invocation Perf Counter
+Here is how many times ~args.outputs.PRIMITIVE_ARRAY <<~ was called:
+
+  3 times invoked.
+
+If the number above is high, consider batching primitives so you can lower the invocation of ~<<~. For example.
+
+Instead of:
+
+#+begin_src
+  args.state.enemies.map do |e|
+    e.alpha = 128
+    args.outputs.sprites << e # <-- ~args.outputs.sprites <<~ is invoked a lot
+  end
+#+end_src
+
+Do this:
+
+#+begin_src
+  args.outputs.sprites << args.state
+                              .enemies
+                              .map do |e| # <-- ~args.outputs.sprites <<~ is only invoked once.
+    e.alpha = 128
+    e
+  end
+#+end_src
+
+** Array Primitives
+~Primitives~ represented as an ~Array~ (~Tuple~) are great for prototyping, but are not as performant as using a ~Hash~.
+
+Here is the number of ~Array~ primitives that were encountered:
+
+  0 Array Primitives.
+
+If the number above is high, consider converting them to hashes. For example.
+
+Instead of:
+
+#+begin_src
+  args.outputs.sprites << [0, 0, 100, 100, 'sprites/enemy.png']
+#+begin_end
+
+Do this:
+
+#+begin_src
+  args.outputs.sprites << { x: 0,
+                            y: 0,
+                            w: 100,
+                            h: 100,
+                            path: 'sprites/enemy.png' }
+#+begin_end
+
+** Primitive Counts
+Here are the draw counts ordered by lowest to highest z order:
+
+PRIMITIVE   COUNT, STATIC COUNT
+solids:     0, 0
+sprites:    3600, 0
+primitives: 0, 0
+labels:     0, 0
+lines:      0, 0
+borders:    0, 0
+debug:      6, 0
+reserved:   0, 0
+
+** Additional Help
+Come to the DragonRuby Discord channel if you need help troubleshooting performance issues. http://discord.dragonruby.org.
+
+Source code for these diagnostics can be found at: [[https://github.com/dragonruby/dragonruby-game-toolkit-contrib/]]
+
+

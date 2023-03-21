@@ -1,0 +1,22 @@
+# * EXCEPTION:
+# * ERROR - :* method missing on ~Class~.
+# The method named
+# :*
+# with args
+# [-1]
+# doesn't exist on
+# [NilClass].
+# #+begin_src ~Class#inspect~
+# NIL
+# #+end_src ~Class#inspect~ for :* method missing on ~Class~
+# ** Backtrace:
+# *** app/main.rb:293:in player_next_dy
+# *** app/main.rb:302:in player_next_rect
+# *** app/main.rb:217:in calc_player_rect
+# *** app/main.rb:131:in calc
+# *** app/main.rb:70:in tick
+# *** app/main.rb:16:in tick
+# *** app/main.rb:59
+
+Game State:
+{:state=>{:entity_id=>1, :tick_count=>150, :__thrash_count__=>{:map=>1, :+=>1, :**=>1}, :game_state=>:game, :player=>{:entity_id=>1, :entity_name=>:player, :entity_keys_by_ref=>{}, :entity_type=>:player, :created_at=>150, :global_created_at=>5918, :__thrash_count__=>{:abs=>1, :+=>1}, :dx=>{:entity_id=>3, :entity_name=>:dx, :entity_keys_by_ref=>{}, :__thrash_count__=>{:<=>1}, :abs=>{:entity_id=>4, :entity_name=>:abs, :entity_keys_by_ref=>{}}}, :rect=>{:x=>nil, :y=>nil, :w=>nil, :h=>nil}, :x=>{:entity_id=>5, :entity_name=>:x, :entity_keys_by_ref=>{}}}, :tiles=>{:entity_id=>2, :entity_name=>:tiles, :entity_keys_by_ref=>{}, :__thrash_count__=>{}}, :gravity=>{:entity_id=>6, :entity_name=>:gravity, :entity_keys_by_ref=>{}}, :drag=>{:entity_id=>7, :entity_name=>:drag, :entity_keys_by_ref=>{}}}, :temp_state=>{}, :inputs=>{:controller_one=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_two=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_three=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_four=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :keyboard=>{:key_up=>{:truthy_keys=>[]}, :key_held=>{:enter=>149, :char=>149, :raw_key=>149, :truthy_keys=>[:enter, :char, :raw_key]}, :key_down=>{:truthy_keys=>[]}, :has_focus=>true}, :mouse=>{:x=>698.0, :y=>199.0, :moved=>nil, :moved_at=>125, :has_focus=>true}, :text=>[]}, :passes=>[], :outputs=>{:solids=>[], :sprites=>[{:x=>nil, :y=>nil, :w=>nil, :h=>nil, :path=>"sprites/square/red.png"}], :lines=>[], :labels=>[], :sounds=>[], :borders=>[], :primitives=>[], :static_solids=>[], :static_borders=>[], :static_sprites=>[], :static_lines=>[], :static_labels=>[], :static_primitives=>[]}, :grid=>{:top=>720, :device_bottom=>0.0, :device_top=>720, :right=>1280, :left_margin=>0.0, :device_height=>720, :device_width=>1280, :bottom=>0.0, :ffi_draw=>"", :native_width=>1280, :native_height=>720, :origin_x=>0.0, :runtime=>{:argv=>"./dragonruby", :platform=>"Linux", :required_files=>[], :reload_list_history=>{"app/main.rb"=>{:current=>{:path=>"app/main.rb", :global_at=>5767, :event=>:reload_completed}, :history=>[{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>-1, :event=>:processing}, {:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>539, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>540, :event=>:processing}, {:path=>"app/main.rb", :global_at=>541, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>4021, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>4022, :event=>:processing}, {:path=>"app/main.rb", :global_at=>4023, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>5703, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>5704, :event=>:processing}, {:path=>"app/main.rb", :global_at=>5705, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>5765, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>5766, :event=>:processing}, {:path=>"app/main.rb", :global_at=>5767, :event=>:reload_completed}]}}}, :allscreen_offset_y=>0, :origin_y=>720, :native_scale=>1.0, :allscreen_offset_x=>0, :native_scale_enum=>100, :left=>0.0, :device_right=>1280, :device_left=>0.0, :name=>:bottom_left, :allscreen_left=>0, :allscreen_right=>1280, :center=>[640.0, 360.0], :center_y=>360.0, :allscreen_bottom=>0, :rect=>[0.0, 0.0, 1280, 720], :allscreen_top=>720, :allscreen_height=>720, :bottom_margin=>0.0, :allscreen_width=>1280, :center_x=>640.0}}

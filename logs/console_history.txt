@@ -1,0 +1,69 @@
+$gtk.reset seed: 1677241906
+$gtk.reset seed: 1677241875
+$gtk.grep_source [".r", '']
+$gtk.reset seed: 1677241846
+$gtk.reset seed: 1677239372
+$gtk.reset seed: 1677239237
+$gtk.grep_source [".re", '']
+$gtk.reset seed: 1677239157
+$gtk.reset seed: 1677238415
+$gtk.reset seed: 1677238329
+$gtk.reset seed: 1677238312
+$gtk.reset seed: 1677238275
+$gtk.reset seed: 1677238225
+$gtk.reset seed: 1677238210
+$gtk.grep_source [".require_relative", '']
+$gtk.grep_source [".require_re", '']
+$gtk.reset seed: 1677237604
+$gtk.reset seed: 1677237464
+$gtk.reset seed: 1677236875
+$gtk.reset seed: 1677185530
+$gtk.reset seed: 1677185224
+$gtk.reset seed: 1677183864
+$gtk.reset seed: 1677182614
+$gtk.reset seed: 1677180334
+$gtk.reset seed: 1677178912
+$gtk.reset seed: 1677178725
+$gtk.reset seed: 1677178492
+$gtk.reset seed: 1677178261
+$gtk.reset seed: 1677177398
+$gtk.reset seed: 1677156853
+$gtk.reset seed: 1677156693
+$gtk.reset seed: 1677154044
+$gtk.reset seed: 1677152206
+$gtk.grep_source [".tile_index", '']
+$gtk.reset seed: 1677150907
+$gtk.reset seed: 1677063700
+$gtk.grep_source [".standing_sprite", '']
+$gtk.reset seed: 1675726090
+$gtk.reset seed: 1675725839
+$gtk.reset seed: 1675725796
+$gtk.grep_source [".rgs", '']
+$wizards.itch.set_dev_id " Remove the pound sign and leading space for the properties below before publishing your game."
+$gtk.grep_source [".outputs", '']
+$gtk.reset seed: 1675071819
+$gtk.grep_source [".tick_instructions", '']
+$gtk.grep_source [".M", '']
+$gtk.grep_source [".menu_state", '']
+$gtk.grep_source [".debug", '']
+$gtk.grep_source [".d", '']
+$gtk.grep_source [".render_debug", '']
+$gtk.grep_source [".render", '']
+$gtk.grep_source [".render_debug_args", '']
+$gtk.reset seed: 1673968878
+$gtk.reset seed: 1675714907
+args.state,player
+args.state.player.speed
+args.player
+args.state
+args.state.player
+args.state.player.dy
+$gtk.reset seed: 1677178954
+tile_index
+player
+state
+state.player
+state.player.dx
+state.player.dy
+player.dy
+$gtk.reset seed: 1677238349

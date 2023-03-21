@@ -1,0 +1,25 @@
+* 000000 [Engine] Log started at 2023/2/23 20:21:54
+* 000000 [Engine] This copy of the engine is git hash ba6c1a98764a11c5a0bb7cc49b0ea618de812b12, built on Jan 13 2023, at 23:45:27
+* 000000 [Engine] Platform: Linux
+* 000000 [Engine] 
+* 000000 [Engine] *******************************************************************************************
+* 000000 [Engine] *** This is the Standard license build!                                                 ***
+* 000000 [Engine] *** Get more with an Indie or Pro license such as C extensions, mobile dev, and VR dev! ***
+* 000000 [Engine] *** Details at http://dragonruby.org/toolkit/game#purchase                              ***
+* 000000 [Engine] *******************************************************************************************
+* 000000 [Engine] 
+- 000000 [Engine] Game Dir: samples/99_genre_3d/04_ray_caster
+- 000000 [Engine] Game ID: raytracer
+- 000000 [Engine] Game Title: Ray Tracer
+- 000000 [Engine] Game Version: 1.0
+- 000000 [Engine] Game Package ID: org.dragonruby.raytracer
+- 000000 [Engine] Game Developer ID: dragonruby
+- 000000 [Engine] Game Developer Title: DragonRuby LLC
+- 000000 [Engine] Production Build: no
+- 000000 [Engine] Remote Hotload: no
+? 000000 [Engine] RNG seed has been set to 1677180114.
+- 000000 [Engine] Janitor is using 4 threads.
+? 000000 [Engine] Marked app/main.rb for reload. (-1)
+! 000000 [HTTPServer] Failed to bind() the listen socket! Will try other options! (Address already in use)
+! 000000 [HTTPServer] Failed to create a listen socket on any reasonable interface.
+* 000017 [Engine] Logging shutting down
